@@ -1,0 +1,84 @@
+/* line 1, sass/pages/_allPages.scss */
+body {
+  background: #f6f6f6;
+  font-family: 'Sen', sans-serif;
+  font-size: 16px;
+}
+
+/* line 9, sass/pages/_allPages.scss */
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 1, sass/layout/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 4, sass/layout/_grid.scss */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 0 1%;
+}
+
+/* line 1, sass/layout/_header.scss */
+header.header {
+  padding: 30px 0;
+  border-bottom: 1px solid #9c9c9c;
+}
+/* line 4, sass/layout/_header.scss */
+header.header .container {
+  display: flex;
+}
+/* line 7, sass/layout/_header.scss */
+header.header .logo {
+  width: 30%;
+}
+/* line 9, sass/layout/_header.scss */
+header.header .logo h1, header.header .logo p {
+  margin: 0;
+}
+/* line 15, sass/layout/_header.scss */
+header.header .logo p {
+  font-weight: 700;
+}
+/* line 20, sass/layout/_header.scss */
+header.header nav.navbar {
+  width: 70%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: #e2494c;
+}
+/* line 27, sass/layout/_header.scss */
+header.header nav.navbar li {
+  width: -webkit-fill-available;
+}
+/* line 29, sass/layout/_header.scss */
+header.header nav.navbar li a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  transition: all 0.35s;
+}
+/* line 39, sass/layout/_header.scss */
+header.header nav.navbar li a:hover {
+  background: #f6f6f6;
+  color: #9c9c9c;
+}

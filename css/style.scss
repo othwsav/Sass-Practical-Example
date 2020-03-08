@@ -1,0 +1,11 @@
+// importing helpers
+@import 'sass/helpers/variables';
+@import 'sass/helpers/mixins';
+
+// importing style: pages, layout and components
+@import 'sass/pages/allPages';
+@import 'sass/layout/grid';
+@import 'sass/pages/home';
+@import 'sass/layout/header';
+@import 'sass/components/buttons';
+@import 'sass/layout/footer';

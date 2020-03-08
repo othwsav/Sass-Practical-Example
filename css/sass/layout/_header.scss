@@ -1,0 +1,46 @@
+header.header{
+    padding: 40px 0;
+    border-bottom: 1px solid $grayColor;
+    .container{
+        display: flex;
+    }
+    .logo{
+        width: 30%;
+        %zeromagin{
+            margin: 0;
+        }
+        h1{
+            @extend %zeromagin;
+        }
+        p{
+            @extend %zeromagin;
+            font-weight: 700;
+        }
+    }
+    nav.navbar{
+        width: 70%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        background: $redColor;
+        li{
+            width: -webkit-fill-available;
+            a{
+                color: white;
+                font-weight: 700;
+                text-decoration: none;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include prefixer(transition, all .35s);
+                &:hover{
+                    background: #f6f6f6;
+                    color: $grayColor;
+                }
+            }
+        }
+    }
+}
