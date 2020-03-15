@@ -1,0 +1,31 @@
+.head-with-border{
+    position: relative;
+    margin-bottom: 50px;
+    h2{
+        background-color: $redColor;
+        text-align: center;
+        width: 300px;
+        max-width: 80vw;
+        margin: 0 auto;
+        color: $whiteColor;
+        padding: 10px 15px;
+        line-height: 1;
+        &::before, &::after{
+            content: "";
+            width: 40px;
+            transform: translateY(-50%);
+            height: 100%;
+            background: $redColor;
+            position: absolute;
+            top: 50%;
+        }
+        &::before{
+            left: calc(50% - 189px);
+            clip-path: polygon(65% 0%, 100% 0%, 100% 100%, 65% 100%, 0% 50%);
+        }
+        &::after{
+            right: calc(50% - 189px);
+            clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+        }
+    }
+}

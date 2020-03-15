@@ -1,0 +1,15 @@
+footer{
+    background-color: $grayColor;
+    .gallery{
+        @extend .box;
+        width: 300px;
+    }
+    .info{
+        @extend .box;
+        width: 300px;
+    }
+    .contact{
+        @extend .box;
+        width: 300px;
+    }
+}

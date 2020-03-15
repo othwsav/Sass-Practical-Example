@@ -6,3 +6,29 @@
     margin: auto;
     padding: 0 1%;
 }
+
+.grid{
+    // $minwidth: 200px;
+    // display: grid;
+    // gap: 2em;
+    // grid-template-columns: repeat(auto-fit, minmax($minwidth, 1fr));
+    // justify-content: center;
+    // align-items: center;
+    // 
+    // @media screen and (min-width: $min) and (max-width: $max){
+    //     .grid-child:last-child{
+    //         grid-column: span 2 / auto;
+    //     }
+    // }
+    display: flex;
+    flex-wrap: wrap;
+    .box{
+        width: 250px;
+        flex-grow: 1;
+        margin: 1em 0.5em;
+        // &:not(:last-child){
+            // margin-right: 1em;
+            // margin-bottom: 2em;
+        // }
+    }
+}

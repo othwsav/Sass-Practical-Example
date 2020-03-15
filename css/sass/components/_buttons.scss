@@ -1,0 +1,15 @@
+.main-button{
+    background-color: $redColor;
+    color: $whiteColor;
+    border: 2px solid $redColor;
+    padding: 10px 25px 5px;
+    cursor: pointer;
+    line-height: 1;
+    font-size: 25px;
+    font-weight: 600;
+    transition: all .5s;
+    &:hover{
+        background-color: $whiteColor;
+        color: $redColor;
+    }
+}

@@ -11,10 +11,12 @@ header.header{
         }
         h1{
             @extend %zeromagin;
+            font-weight: 700;
+            font-size: 2.2em;
         }
         p{
             @extend %zeromagin;
-            font-weight: 700;
+            font-weight: 300;
         }
     }
     nav.navbar{
@@ -27,8 +29,8 @@ header.header{
         li{
             width: -webkit-fill-available;
             a{
-                color: white;
-                font-weight: 700;
+                color: $whiteColor;
+                font-weight: 500;
                 text-decoration: none;
                 height: 100%;
                 width: 100%;
@@ -37,7 +39,7 @@ header.header{
                 justify-content: center;
                 @include prefixer(transition, all .35s);
                 &:hover{
-                    background: #f6f6f6;
+                    background: $whiteColor;
                     color: $grayColor;
                 }
             }
