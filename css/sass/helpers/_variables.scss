@@ -1,8 +1,18 @@
-$MaxMobile: "(max-width: 767px)";
-$MaxSmall: "(max-width: 991px)";
-$MinSmall: "(min-width: 768px)";
+// Max value media query
+$MaxSmall: "(min-width: 575px)";
+$MaxMedium: "(min-width: 767px)";
+$MaxLarge: "(min-width: 991px)";
+$MaxExtraLarge: "(min-width: 1199px)";
 
+// Min value media query
+$MinSmall: "(min-width: 576px)";
+$MinMedium: "(min-width: 768px)";
+$MinLarge: "(min-width: 1002px)";
+$MinExtraLarge: "(min-width: 1300px)";
+
+// Color Variables
 $redColor: #e2494c;
-$grayColor: #9c9c9c;
+$grayColor: #c1c1c1;
 $whiteColor: #f6f6f6;
+$grayColor2: ($grayColor - #777);
 

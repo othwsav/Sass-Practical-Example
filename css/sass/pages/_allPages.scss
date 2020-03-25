@@ -2,8 +2,8 @@ body{
     background: $whiteColor;
     font:{
         // family:'Sen', sans-serif;
-        family:'Teko', sans-serif;
-        size: 20px;
+        family:'Changa', sans-serif;
+        size: 16px;
     }
 }
 
@@ -12,24 +12,7 @@ ul, ol{
     padding: 0;
 }
 // Start Framework
-.title{
-    font-size: 1.8em;
-    font-weight: 600;
-}
 
-.centred-title{
-    @extend .title;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &::after{
-        content: "";
-        height: 2px;
-        width: 80px;
-        background: $redColor;
-    }
-}
 
 section:not(:last-child){
     margin-bottom: 100px;

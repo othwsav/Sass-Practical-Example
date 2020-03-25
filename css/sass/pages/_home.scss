@@ -1,12 +1,9 @@
 // Start Slider
 section.slider{
-    height: 110vh;
+    height: 850px;
     overflow: hidden;
-    // .container{
-    //     height: 100%;
-    // }
     .active-img{
-        height: 95vh;
+        height: 86%;
         background-image: url("../../../images/slider/1.jpg");
         background-size: cover;
         background-position: center bottom;
@@ -64,7 +61,7 @@ section.slider{
 // Start Card Component
 .card{
     border: 2px solid #e2494c;
-    padding: 0 25px 10px;
+    padding: 15px;
 }
 // End Card Component
 // Start Our players
@@ -110,7 +107,6 @@ section.slider{
             @extend .card;
             img{
                 max-width: 100%;
-                margin-top: 30px;
             }
         }
     }

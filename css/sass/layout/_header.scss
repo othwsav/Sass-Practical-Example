@@ -40,7 +40,7 @@ header.header{
                 @include prefixer(transition, all .35s);
                 &:hover{
                     background: $whiteColor;
-                    color: $grayColor;
+                    color: $grayColor2;
                 }
             }
         }

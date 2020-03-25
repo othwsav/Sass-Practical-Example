@@ -1,15 +1,114 @@
 footer{
     background-color: $grayColor;
-    .gallery{
+    & .grid>div{
         @extend .box;
-        width: 300px;
+        // width: 300px;
+    }
+    .gallery{
+        flex-grow: 4 !important;
+        .title.section-title{
+            margin-left: 5px;
+        }
+        .img-box{
+            display: flex;
+            flex-wrap: wrap;
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+            img{
+                width: 20%;
+                min-width: 90px;
+                border: 2px solid $grayColor2;
+                padding: 3px;
+                margin: 0 5px;
+            }
+            .description{
+                flex-grow: 1;
+                align-self: center;
+                margin: 0 5px;
+                min-width: 220px;
+                width: calc(80% - 20px);
+                &>*{
+                    margin: 5px 0;
+                }
+                h4{
+                    color: $redColor;
+                    font:{
+                        weight: 400;
+                        size: 20px;
+                    }
+                }
+                p{
+                    color: $grayColor2;
+                    font:{
+                        weight: 300;
+                        size: 18px;
+                    }
+                }
+            }
+        }
     }
     .info{
-        @extend .box;
-        width: 300px;
+        flex-grow: 0 !important;
+        font-weight: 300;
+        &>*:not(h3){
+            margin: 10px 0;
+            color: $grayColor2;
+        }
+        ul{
+            li{
+                a{
+                    color: $redColor;
+                    text-decoration: none;
+                }
+            }
+        }
     }
     .contact{
-        @extend .box;
-        width: 300px;
+        flex-grow: 2 !important;
+        form{
+            display: flex;
+            flex-direction: column;
+            &>*:not(:last-child){
+                padding: 5px 8px;
+                margin-bottom: 15px;
+                border: 1px solid $grayColor;
+                transition: all .4s;
+                &:focus{
+                    outline: none;
+                    border: 1px solid $grayColor2;
+                }
+            }
+            &>:last-child{
+                align-self: start;
+            }
+            textarea{
+                resize: none;
+            }
+        }
+    }
+    .copyright{
+        padding: 60px 0 30px;
+        display: flex;
+        justify-content: space-around;
+        color: $grayColor2;
+        position: relative;
+        flex-wrap: wrap;
+        &::before{
+            content: "";
+            position: absolute;
+            height: 1px;
+            box-shadow: 0px 1px 1px rgba($color: white, $alpha: .75);
+            width: 100%;
+            top: 0;
+            margin: 29px 0;
+            background: #4a4a4a;
+        }
+        .author{
+            a{
+                color: $redColor;
+                text-decoration: none;
+            }
+        }
     }
 }

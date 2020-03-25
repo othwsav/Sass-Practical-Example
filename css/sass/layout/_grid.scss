@@ -5,6 +5,19 @@
     width: 80%;
     margin: auto;
     padding: 0 1%;
+    @media #{$MinSmall} {
+        max-width: 540px;
+    }
+    @media #{$MinMedium} {
+        max-width: 720px;
+    }
+    @media #{$MinLarge} {
+        max-width: 960px;
+    }
+    @media #{$MinExtraLarge} {
+        max-width: 1180px;
+    }
+    
 }
 
 .grid{
