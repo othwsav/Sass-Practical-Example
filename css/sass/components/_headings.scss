@@ -10,6 +10,9 @@
         color: $whiteColor;
         padding: 10px 15px;
         line-height: 1;
+        @media #{$MaxSmall} {
+            max-width: -webkit-fill-available;
+        }
         &::before, &::after{
             content: "";
             width: 56px;
@@ -18,7 +21,7 @@
             background: $redColor;
             position: absolute;
             top: 50%;
-            @media only screen and (max-width: 430px){
+            @media #{$MaxSmall} {
                 display: none;
             }
         }

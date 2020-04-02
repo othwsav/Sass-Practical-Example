@@ -1,18 +1,39 @@
 // Max value media query
-$MaxSmall: "(min-width: 575px)";
-$MaxMedium: "(min-width: 767px)";
-$MaxLarge: "(min-width: 991px)";
-$MaxExtraLarge: "(min-width: 1199px)";
+$MaxSmall: "(max-width: 575px)";
+$MaxMedium: "(max-width: 767px)";
+$MaxLarge: "(max-width: 991px)";
+$MaxExtraLarge: "(max-width: 1199px)";
 
 // Min value media query
 $MinSmall: "(min-width: 576px)";
 $MinMedium: "(min-width: 768px)";
-$MinLarge: "(min-width: 1002px)";
-$MinExtraLarge: "(min-width: 1300px)";
+$MinLarge: "(min-width: 992px)";
+$MinExtraLarge: "(min-width: 1490px)";
 
 // Color Variables
-$redColor: #e2494c;
+$colorList: #e2494c, #1B1464, #6F1E51, #006266;
+
+
 $grayColor: #c1c1c1;
 $whiteColor: #f6f6f6;
-$grayColor2: ($grayColor - #777);
+$grayColor2: mix($grayColor, black, 25%);
 
+
+
+body{
+    &.red{
+        --bgColor: #e2494c; 
+    }
+    &.blue{
+        --bgColor: #1B1464;
+    }
+    &.purple{
+        --bgColor: #6F1E51;
+    }
+    &.green{
+        --bgColor: #006266;
+    }
+}
+
+
+$redColor: var(--bgColor);

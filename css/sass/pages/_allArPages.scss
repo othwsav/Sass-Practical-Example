@@ -1,5 +1,37 @@
-body{
+// body{
     // font-family: 'Tajawal', sans-serif;
-    font-family: 'Changa', sans-serif;
-    font-size: 16px;
+    // font-family: 'Changa', sans-serif;
+    // font-size: 16px;
+// }
+header.header{
+    .logo{
+        margin-right: 0;
+        margin-left: max(8vw, 20px);
+    }
+}
+header.mobile{
+    left: auto;
+    right: min(-35%, -300px);
+}
+
+.theme-button{
+    right: auto;
+    left: 2vw;
+}
+.colors{
+    right: auto;
+    left: calc(60px + 2vw);
+    &::before{
+        right: auto;
+        left: -22px;
+    }
+    &.off::before{
+        border-left-color: transparent;
+        border-right-color: $redColor;
+    }
+    &.on::before{
+        // border-left-color: $whiteColor2;
+        border-left-color: transparent;
+        border-right-color: $redColor;
+    }
 }

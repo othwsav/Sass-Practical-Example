@@ -1,4 +1,4 @@
-css\sass
-css\*.scss
-css\*.map
+css/sass
+css/*.scss
+css/*.map
 images

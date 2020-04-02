@@ -2,6 +2,7 @@
 section.slider{
     height: 850px;
     overflow: hidden;
+    margin-top: 139px;
     .active-img{
         height: 86%;
         background-image: url("../../../images/slider/1.jpg");
@@ -20,7 +21,7 @@ section.slider{
             cursor: pointer;
             transition: all .5s;
             &.active, &:hover{
-                border-color: black;
+                border-color: $redColor;
                 background-color: $whiteColor;
             }
         }
@@ -60,7 +61,7 @@ section.slider{
 // End Services
 // Start Card Component
 .card{
-    border: 2px solid #e2494c;
+    border: 2px solid $redColor;
     padding: 15px;
 }
 // End Card Component
@@ -112,3 +113,64 @@ section.slider{
     }
 }
 // End Lorem Ipsum
+
+// Scroll to top button
+$whiteColor2: $whiteColor;
+.theme-button{
+    display: flex;
+    position: fixed;
+    top: 50vh;
+    right: 2vw;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    font-size: larger;
+    background: $redColor;
+    color: $whiteColor2;
+    border: 2px solid $whiteColor2;
+    &:hover{
+        background: $whiteColor2;
+        color: $redColor;
+        border-color: $redColor;
+    }
+}
+.colors{
+    @include prefixer(transition, color .35s);
+    @include prefixer(transition, border-color .35s);
+    @include prefixer(transition, background-color .35s);
+    display: none;
+    position: fixed;
+    top: calc(50% + -10.5px);
+    right: calc(60px + 2vw);
+    padding: 10px;
+    background: $whiteColor2;
+    border: 2px solid $redColor;
+    &::before{
+        content: "";
+        position: absolute;
+        right: -22px;
+        top: -2px;
+        border: 10px solid transparent;
+    }
+    &.off::before{
+        border-left-color: $redColor;
+    }
+    &.on::before{
+        // border-left-color: $whiteColor2;
+        border-left-color: $redColor;
+    }
+    .color{
+        width: 40px;
+        height: 40px;
+        border: 1px solid $whiteColor;
+        cursor: pointer;
+        @for $i from 1 through 4{
+            &.color#{$i}{
+                background-color: nth($colorList, $i);
+            }
+        }
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+    }
+}

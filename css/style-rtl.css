@@ -1,5 +1,46 @@
-/* line 1, sass/pages/_allArPages.scss */
-body {
-  font-family: 'Changa', sans-serif;
-  font-size: 16px;
+body.red {
+  --bgColor: #e2494c;
 }
+body.blue {
+  --bgColor: #1B1464;
+}
+body.purple {
+  --bgColor: #6F1E51;
+}
+body.green {
+  --bgColor: #006266;
+}
+
+header.header .logo {
+  margin-right: 0;
+  margin-left: max(8vw, 20px);
+}
+
+header.mobile {
+  left: auto;
+  right: min(-35%, -300px);
+}
+
+.theme-button {
+  right: auto;
+  left: 2vw;
+}
+
+.colors {
+  right: auto;
+  left: calc(60px + 2vw);
+}
+.colors::before {
+  right: auto;
+  left: -22px;
+}
+.colors.off::before {
+  border-left-color: transparent;
+  border-right-color: var(--bgColor);
+}
+.colors.on::before {
+  border-left-color: transparent;
+  border-right-color: var(--bgColor);
+}
+
+/*# sourceMappingURL=style-rtl.css.map */

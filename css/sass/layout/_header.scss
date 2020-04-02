@@ -1,11 +1,26 @@
+header.notm{
+    nav{
+        @media #{$MaxLarge} {
+            display: none !important;
+        }
+    }
+}
 header.header{
-    padding: 40px 0;
-    border-bottom: 1px solid $grayColor;
+    z-index: 1;
+    width: 100%;
     .container{
         display: flex;
+        justify-content: space-between;
+    }
+    #mobile-button{
+        display: none;
+        @extend .icon-button;
+        @media #{$MaxLarge} {
+            display: flex;
+        }
     }
     .logo{
-        width: 30%;
+        margin-right: max(8vw, 20px);
         %zeromagin{
             margin: 0;
         }
@@ -20,16 +35,16 @@ header.header{
         }
     }
     nav.navbar{
-        width: 70%;
+        width: -webkit-fill-available;
         list-style: none;
         display: flex;
         justify-content: space-between;
         align-items: stretch;
-        background: $redColor;
+        // background: $redColor;
         li{
             width: -webkit-fill-available;
             a{
-                color: $whiteColor;
+                // color: $whiteColor;
                 font-weight: 500;
                 text-decoration: none;
                 height: 100%;
@@ -38,11 +53,122 @@ header.header{
                 align-items: center;
                 justify-content: center;
                 @include prefixer(transition, all .35s);
+                // &:hover{
+                //     background: $whiteColor;
+                //     color: $grayColor2;
+                // }
+            }
+        }
+    }
+}
+header.fixedheader{
+    position: fixed;
+    top: -90px;
+    padding: 10px 0;
+    border-bottom: 2px solid $whiteColor;
+    background: $redColor;
+    color: $whiteColor;
+    font-size: smaller;
+    #mobile-button{
+        padding: 0 18.29px;
+        background-color: $whiteColor;
+        color: $grayColor2;
+        &:hover{
+            background: $redColor;
+            color: $whiteColor
+        }
+    }
+    nav{
+        background: $whiteColor;
+        li a{
+            color: $grayColor2;
+            &:hover{
+                background: $redColor;
+                color: $whiteColor
+            }
+        }
+    }
+}
+
+header.topheader{
+    position: absolute;
+    top: 0;
+    padding: 40px 0;
+    border-bottom: 1px solid $grayColor;
+    background: transparent;
+    color: $grayColor2;
+    #mobile-button{
+        padding: 0 22.15px;
+        background-color: $redColor;
+        color: $whiteColor;
+        &:hover{
+            background: $whiteColor;
+            color: $grayColor2
+        }
+    }
+    nav{
+        background: $redColor;
+        li a{
+            color: $whiteColor;
+            &:hover{
+                background: $whiteColor;
+                color: $grayColor2
+            }
+        }
+    }
+}
+
+// start mobile header
+header.mobile{
+    display: none;
+    position: fixed;
+    width: 35%;
+    min-width: 300px;
+    background: $whiteColor;
+    flex-direction: column;
+    top: 0;
+    height: 100%;
+    z-index: 5;
+    left: min(-35%, -300px);
+    @include prefixer(transition, all .5s);
+    @media #{$MaxLarge}{
+        display: flex;
+    }
+    .logo{
+        margin: 0 !important;
+        width: auto;
+        padding: 50px 0;
+        text-align: center;
+    }
+    nav.navbar{
+        flex-grow: .8;
+        width: 75%;
+        align-self: center;
+        flex-direction: column;
+        justify-content: space-around;
+        background: $redColor;
+        font-size: larger;
+        li{
+            height: 100%;
+            a{
+                color: $whiteColor;
                 &:hover{
                     background: $whiteColor;
-                    color: $grayColor2;
+                    color: $grayColor2
                 }
             }
         }
     }
+}
+#mobile-overlay {
+    @media #{$MinLarge} {
+        display: none !important;
+    }
+    display: none;
+    z-index: 4;
+    position: fixed;
+    background: rgba($color: $grayColor2, $alpha: 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
 }
