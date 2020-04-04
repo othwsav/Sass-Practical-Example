@@ -104,7 +104,6 @@ $(document).ready(function (){
     })
 
     $(".theme-button").mouseleave(function () {
-        console.log("object");
         $(".colors").css({
             "background": "#f6f6f6",
             // "border": "2px solid " + bgColor
@@ -113,9 +112,21 @@ $(document).ready(function (){
         $(".colors").toggleClass("on")
     })
     // changing theme on click
+    let colorList = []
+    $(".colors .color").each(function () { 
+        colorList.push($(this).css("background-color"))
+    })
+
     $(".colors .color").on("click", function (){
-        $("body").removeClass().addClass($(this).data("color"))
+        $("body").css('--bgColor', colorList[$(this).index()])
+
+        localStorage.setItem("myTheme", colorList[$(this).index()])
+        
         bgColor = $("body").css('--bgColor')
         $(".theme-button").click()
     })
+    // local storage
+    const theme = localStorage.getItem("myTheme")
+    if(theme)
+        $("body").css('--bgColor', theme)
 })

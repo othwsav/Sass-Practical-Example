@@ -7,6 +7,14 @@ body{
         size: 16px;
     }
 }
+*{
+    @include prefixer(transition, background-color .5s);
+    @include prefixer(transition, border-color .5s);
+}
+*::before, *::after{
+    @include prefixer(transition, background-color .5s);
+    @include prefixer(transition, border-color .5s);
+}
 
 ul, ol{
     list-style: none;

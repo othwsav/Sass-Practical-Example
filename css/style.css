@@ -1,14 +1,5 @@
-body.red {
+body {
   --bgColor: #e2494c;
-}
-body.blue {
-  --bgColor: #1B1464;
-}
-body.purple {
-  --bgColor: #6F1E51;
-}
-body.green {
-  --bgColor: #006266;
 }
 
 body {
@@ -16,6 +7,32 @@ body {
   color: #303030;
   font-family: "Changa", sans-serif;
   font-size: 16px;
+}
+
+* {
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s;
+  -ms-transition: border-color 0.5s;
+  transition: border-color 0.5s;
+}
+
+*::before, *::after {
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s;
+  -ms-transition: border-color 0.5s;
+  transition: border-color 0.5s;
 }
 
 ul, ol {

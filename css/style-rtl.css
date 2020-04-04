@@ -1,14 +1,5 @@
-body.red {
+body {
   --bgColor: #e2494c;
-}
-body.blue {
-  --bgColor: #1B1464;
-}
-body.purple {
-  --bgColor: #6F1E51;
-}
-body.green {
-  --bgColor: #006266;
 }
 
 header.header .logo {
