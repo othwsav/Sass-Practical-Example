@@ -34,4 +34,13 @@ header.mobile {
   border-right-color: var(--bgColor);
 }
 
+.langswitcher {
+  left: auto;
+  right: 2vw;
+}
+.langswitcher .lang-button i {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
 /*# sourceMappingURL=style-rtl.css.map */

@@ -167,7 +167,7 @@ section.slider ul.bullets li.active, section.slider ul.bullets li:hover {
   max-width: 100%;
 }
 
-.theme-button {
+.theme-button, .langswitcher .lang-button {
   display: flex;
   position: fixed;
   top: 50vh;
@@ -180,7 +180,7 @@ section.slider ul.bullets li.active, section.slider ul.bullets li:hover {
   color: #f6f6f6;
   border: 2px solid #f6f6f6;
 }
-.theme-button:hover {
+.theme-button:hover, .langswitcher .lang-button:hover {
   background: #f6f6f6;
   color: var(--bgColor);
   border-color: var(--bgColor);
@@ -204,7 +204,7 @@ section.slider ul.bullets li.active, section.slider ul.bullets li:hover {
   transition: background-color 0.35s;
   display: none;
   position: fixed;
-  top: calc(50% + -10.5px);
+  top: calc(50vh - 10px);
   right: calc(60px + 2vw);
   padding: 10px;
   background: #f6f6f6;
@@ -243,6 +243,50 @@ section.slider ul.bullets li.active, section.slider ul.bullets li:hover {
 }
 .colors .color:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.langswitcher {
+  position: fixed;
+  bottom: 2vh;
+  left: 2vw;
+}
+.langswitcher .lang-button {
+  position: static;
+  top: auto;
+  right: auto;
+  width: fit-content;
+  transform: none;
+}
+.langswitcher .lang-button i {
+  margin-left: 15px;
+}
+.langswitcher .langlist {
+  display: none;
+  background-color: #f6f6f6;
+  border: 2px solid var(--bgColor);
+  border-bottom: none;
+}
+.langswitcher .langlist .lang {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 20px 25px;
+  display: block;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.langswitcher .langlist .lang:not(:last-child) {
+  border-bottom: 1px solid var(--bgColor);
+}
+.langswitcher .langlist .lang:not(:first-child) {
+  border-top: 1px solid var(--bgColor);
+}
+.langswitcher .langlist .lang:hover {
+  background-color: var(--bgColor);
+  color: #f6f6f6;
 }
 
 @media (max-width: 991px) {
@@ -425,7 +469,7 @@ header.mobile nav.navbar li a:hover {
   }
 }
 
-.main-button {
+.main-button, .langswitcher .lang-button {
   background-color: var(--bgColor);
   color: #f6f6f6;
   border: 2px solid var(--bgColor);
@@ -436,7 +480,7 @@ header.mobile nav.navbar li a:hover {
   font-weight: 600;
   transition: all 0.5s;
 }
-.main-button:hover {
+.main-button:hover, .langswitcher .lang-button:hover {
   background-color: #f6f6f6;
   color: var(--bgColor);
 }

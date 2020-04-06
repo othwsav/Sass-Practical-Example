@@ -93,7 +93,7 @@ $(document).ready(function (){
     $(".theme-button").click(function () {
         $(".colors").slideToggle(300)
     })
-    let bgColor = $("body").css('--bgColor');
+    let bgColor = localStorage.getItem("myTheme")//$("body").css('--bgColor');
     $(".theme-button").mouseenter(function () {
         $(".colors").css({
             "background": bgColor,
@@ -116,17 +116,25 @@ $(document).ready(function (){
     $(".colors .color").each(function () { 
         colorList.push($(this).css("background-color"))
     })
-
+    
     $(".colors .color").on("click", function (){
         $("body").css('--bgColor', colorList[$(this).index()])
-
+        // setting local storage item
         localStorage.setItem("myTheme", colorList[$(this).index()])
         
         bgColor = $("body").css('--bgColor')
         $(".theme-button").click()
     })
-    // local storage
+
+    
+    // getting local storage item
     const theme = localStorage.getItem("myTheme")
     if(theme)
         $("body").css('--bgColor', theme)
+
+
+    // language switcher
+    $(".langswitcher .lang-button").click(function () {
+        $(".langswitcher .langlist").slideToggle()
+    }) 
 })

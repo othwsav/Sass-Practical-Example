@@ -140,7 +140,7 @@ $whiteColor2: $whiteColor;
     @include prefixer(transition, background-color .35s);
     display: none;
     position: fixed;
-    top: calc(50% + -10.5px);
+    top: calc(50vh - 10px);
     right: calc(60px + 2vw);
     padding: 10px;
     background: $whiteColor2;
@@ -171,6 +171,48 @@ $whiteColor2: $whiteColor;
         }
         &:not(:last-child){
             margin-bottom: 10px;
+        }
+    }
+}
+// language switcher
+.langswitcher{
+    position: fixed;
+    bottom: 2vh;
+    left: 2vw;
+    .lang-button{
+        @extend .theme-button;
+        @extend .main-button;
+        position: static;
+        top: auto;
+        right: auto;
+        width: fit-content;
+        transform: none;
+        i{
+            margin-left: 15px;
+        }
+    }
+    .langlist{
+        display: none;
+        background-color: $whiteColor;
+        border: 2px solid $redColor;
+        border-bottom: none;
+        .lang{
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            padding: 20px 25px;
+            display: block;
+            @include prefixer(transition, all .5s);
+            &:not(:last-child){
+                border-bottom: 1px solid $redColor;
+            }
+            &:not(:first-child){
+                border-top: 1px solid $redColor;
+            }
+            &:hover{
+                background-color: $redColor;
+                color: $whiteColor;
+            }
         }
     }
 }

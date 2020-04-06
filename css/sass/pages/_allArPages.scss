@@ -35,3 +35,15 @@ header.mobile{
         border-right-color: $redColor;
     }
 }
+
+// language switcher
+.langswitcher{
+    left: auto;
+    right: 2vw;
+    .lang-button{
+        i{
+            margin-left: 0;
+            margin-right: 15px;
+        }
+    }
+}
