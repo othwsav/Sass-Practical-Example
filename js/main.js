@@ -1,8 +1,10 @@
 $(document).ready(function (){
+
     // slider script
     $("section.slider ul.bullets li").on('click', function(){
-        $(this).addClass("active").siblings().removeClass("active");
-        let thatNum = $(this).index() + 1;
+        $(this).addClass("active").siblings().removeClass("active")
+        let thatNum = $(this).index() + 1
+        localStorage.setItem("activeBullet", thatNum)
         $("section.slider .active-img").animate({
             opacity : '0'
         },500, function(){
@@ -11,6 +13,12 @@ $(document).ready(function (){
             },500)
         })
     })
+    // Slider active image local Storage
+    const activeBulletNum = localStorage.getItem("activeBullet")
+    if(activeBulletNum)
+        $(".slider ul li").eq(Number(activeBulletNum) - 1).click()
+    else
+        $(".slider ul li").eq(0).click()
     // header menu script
     let after = false
     $(window).scroll(function (){
@@ -137,4 +145,5 @@ $(document).ready(function (){
     $(".langswitcher .lang-button").click(function () {
         $(".langswitcher .langlist").slideToggle()
     }) 
+
 })

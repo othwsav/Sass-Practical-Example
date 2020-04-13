@@ -109,6 +109,10 @@ footer{
             a{
                 color: $redColor;
                 text-decoration: none;
+                img{
+                    height: 24px;
+                    vertical-align: middle;
+                }
             }
         }
     }

@@ -95,7 +95,6 @@ section.slider {
 }
 section.slider .active-img {
   height: 86%;
-  background-image: url("../../../images/slider/1.jpg");
   background-size: cover;
   background-position: center bottom;
   background-attachment: fixed;
@@ -657,6 +656,10 @@ footer .copyright::before {
 footer .copyright .author a {
   color: var(--bgColor);
   text-decoration: none;
+}
+footer .copyright .author a img {
+  height: 24px;
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=style.css.map */
