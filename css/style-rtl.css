@@ -1,7 +1,3 @@
-body {
-  --bgColor: #e2494c;
-}
-
 header.header .logo {
   margin-right: 0;
   margin-left: max(8vw, 20px);

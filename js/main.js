@@ -139,6 +139,8 @@ $(document).ready(function (){
     const theme = localStorage.getItem("myTheme")
     if(theme)
         $("body").css('--bgColor', theme)
+    else
+        $("body").css('--bgColor', "#e2494c")
 
 
     // language switcher

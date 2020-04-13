@@ -20,21 +20,9 @@ $grayColor2: mix($grayColor, black, 25%);
 
 
 
-body{
-    --bgColor: #e2494c;
-    // &.red{
-    //     --bgColor: #e2494c; 
-    // }
-    // &.blue{
-    //     --bgColor: #1B1464;
-    // }
-    // &.purple{
-    //     --bgColor: #6F1E51;
-    // }
-    // &.green{
-    //     --bgColor: #006266;
-    // }
-}
+// body{
+//     --bgColor: #e2494c;
+// }
 
 
 $redColor: var(--bgColor);
